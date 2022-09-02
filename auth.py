@@ -93,6 +93,7 @@ class AuthInfo(BaseModel):
             value=authInfo.token(),
             secure=True,
             httponly=True,
+            samesite="lax",
         )
 
         return authInfo
